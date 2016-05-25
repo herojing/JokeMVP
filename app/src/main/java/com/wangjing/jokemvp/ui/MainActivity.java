@@ -51,12 +51,14 @@ public class MainActivity extends BaseActivity implements JokeView {
     public void loaderData() {
         mJokeAdapter = new JokeAdapter(this, mJokeInfoArrayList);
         mListView.setAdapter(mJokeAdapter);
+        //通知 Presenter 加载数据
         mJokePresenter.getJoke(PAGE_NUM, PAGE_SIZE);
     }
 
     @Override
     public void showLoading() {
         // TODO 显示进度条
+
     }
 
     @Override

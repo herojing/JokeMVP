@@ -55,13 +55,11 @@ public class JokeAdapter extends BaseAdapter {
         }else {
             ret=convertView;
         }
-
         ViewHolder holder = (ViewHolder) ret.getTag();
         if(holder==null){
             holder=new ViewHolder(ret);
             ret.setTag(holder);
         }
-
         holder.setUI(mJokeInfoArrayList.get(position));
 
         return ret;
